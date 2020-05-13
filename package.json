@@ -1,0 +1,44 @@
+{
+  "name": "@tuft/bench",
+  "version": "1.0.0",
+  "description": "TuftJS benchmarking suite.",
+  "author": "Stuart Kennedy",
+  "license": "MIT",
+  "homepage": "https://github.com/tuftjs/bench#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tuftjs/bench.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tuftjs/bench/issues"
+  },
+  "keywords": [
+    "tuft",
+    "tuftjs",
+    "HTTP/2",
+    "bench",
+    "benchmark"
+  ],
+  "scripts": {
+    "start:node": "node_modules/.bin/pm2 start ./lib/node.js -i max",
+    "start:tuft": "node_modules/.bin/pm2 start ./lib/tuft.js -i max",
+    "start:hapi": "node_modules/.bin/pm2 start ./lib/hapi.js -i max",
+    "start:fastify": "node_modules/.bin/pm2 start ./lib/fastify.js -i max",
+    "start:koa": "node_modules/.bin/pm2 start ./lib/koa.js -i max",
+    "start:all": "npm run start:node && npm run start:tuft && npm run start:hapi && npm run start:fastify && npm run start:koa",
+    "stop:node": "node_modules/.bin/pm2 stop node",
+    "stop:tuft": "node_modules/.bin/pm2 stop tuft",
+    "stop:hapi": "node_modules/.bin/pm2 stop hapi",
+    "stop:fastify": "node_modules/.bin/pm2 stop fastify",
+    "stop:koa": "node_modules/.bin/pm2 stop koa",
+    "stop:all": "node_modules/.bin/pm2 stop all"
+  },
+  "dependencies": {
+    "@hapi/hapi": "^19.1.1",
+    "fastify": "^2.14.1",
+    "koa": "^2.11.0",
+    "koa-router": "^8.0.8",
+    "pm2": "^4.4.0",
+    "tuft": "^1.0.0-alpha.7"
+  }
+}
