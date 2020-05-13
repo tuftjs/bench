@@ -18,7 +18,7 @@ To get the most reliable results, you should be using two systems that do not sh
 
 Once you have a system running with your preferred version of Node, make sure all the frameworks and dependencies are installed.
 
-```sh
+```
 $ npm install
 ```
 
@@ -26,19 +26,19 @@ This suite is bundled with [PM2](https://pm2.keymetrics.io), a process manager w
 
 To run a specific server, use the command:
 
-```sh
+```
 $ npm run start:{app name}
 ```
 
 For example, to run Tuft:
 
-```sh
+```
 $ npm run start:tuft
 ```
 
 To run all servers simultaneously:
 
-```sh
+```
 $ npm run start:all
 ```
 
@@ -57,7 +57,7 @@ The benchmark results below use an HTTP/2 load testing client called `h2load`, w
 * **Client command:** `h2load -t2 -c10 -m100 --duration=60 --warm-up-time=30`  
 
 ### Node native: 36,701.67 req/s
-```sh
+```
 finished in 90.00s, 36701.67 req/s, 1.68MB/s
 requests: 2202100 total, 2202100 started, 2202100 done, 2202100 succeeded, 0 failed, 0 errored, 0 timeout
 status codes: 2202000 2xx, 0 3xx, 0 4xx, 0 5xx
@@ -70,7 +70,7 @@ req/s           :    3614.97     3724.98     3670.14       56.07   100.00%
 ```
 
 ### Tuft: 32,366.67 req/s
-```sh
+```
 finished in 90.00s, 32366.67 req/s, 1.48MB/s
 requests: 1942000 total, 1942000 started, 1942000 done, 1942000 succeeded, 0 failed, 0 errored, 0 timeout
 status codes: 1942900 2xx, 0 3xx, 0 4xx, 0 5xx
@@ -83,7 +83,7 @@ req/s           :    3219.93     3251.63     3236.61       15.24    80.00%
 ```
 
 ### Fastify: 21,440.00 req/s
-```sh
+```
 finished in 90.00s, 21440.00 req/s, 1005.29KB/s
 requests: 1286400 total, 1286400 started, 1286400 done, 1286400 succeeded, 0 failed, 0 errored, 0 timeout
 status codes: 1286500 2xx, 0 3xx, 0 4xx, 0 5xx
@@ -96,7 +96,7 @@ req/s           :    2096.63     2191.64     2143.97       49.90   100.00%
 ```
 
 ### Koa: 15,461.67 req/s
-```sh
+```
 finished in 90.00s, 15461.67 req/s, 725.12KB/s
 requests: 927700 total, 927700 started, 927700 done, 927700 succeeded, 0 failed, 0 errored, 0 timeout
 status codes: 927900 2xx, 0 3xx, 0 4xx, 0 5xx
@@ -109,7 +109,7 @@ req/s           :    1483.34     1638.34     1546.16       79.33    60.00%
 ```
 
 ### Hapi: 12,813.33 req/s
-```sh
+```
 finished in 90.00s, 12813.33 req/s, 625.81KB/s
 requests: 768800 total, 768800 started, 768800 done, 768800 succeeded, 0 failed, 0 errored, 0 timeout
 status codes: 768700 2xx, 0 3xx, 0 4xx, 0 5xx
