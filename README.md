@@ -57,7 +57,7 @@ The benchmark results below use an HTTP/2 load testing client called `h2load`, w
 * **Client command:** `h2load -c100 -m100 --duration=60 --warm-up-time=30`
 
 ### Node native: 89,772 req/s
-```sh
+```
 finished in 90.01s, 89771.67 req/s, 4.11MB/s
 requests: 5386300 total, 5386300 started, 5386300 done, 5386300 succeeded, 0 failed, 0 errored, 0 timeout
 status codes: 5385000 2xx, 0 3xx, 0 4xx, 0 5xx
@@ -70,7 +70,7 @@ req/s           :     833.24      981.65      897.66       58.21    51.00%
 ```
 
 ### Tuft: 77,218 req/s
-```sh
+```
 finished in 90.01s, 77218.33 req/s, 3.54MB/s
 requests: 4633100 total, 4633100 started, 4633100 done, 4633100 succeeded, 0 failed, 0 errored, 0 timeout
 status codes: 4630300 2xx, 0 3xx, 0 4xx, 0 5xx
@@ -83,7 +83,7 @@ req/s           :     704.93      803.33      772.14       41.34    73.00%
 ```
 
 ### Fastify: 47,137 req/s
-```sh
+```
 finished in 90.01s, 47136.67 req/s, 2.16MB/s
 requests: 2828200 total, 2828200 started, 2828200 done, 2828200 succeeded, 0 failed, 0 errored, 0 timeout
 status codes: 2826900 2xx, 0 3xx, 0 4xx, 0 5xx
@@ -96,7 +96,7 @@ req/s           :     434.97      496.66      471.34       23.56    49.00%
 ```
 
 ### Koa: 34,135 req/s
-```sh
+```
 finished in 90.01s, 34135.00 req/s, 1.57MB/s
 requests: 2048100 total, 2048100 started, 2048100 done, 2048100 succeeded, 0 failed, 0 errored, 0 timeout
 status codes: 2048600 2xx, 0 3xx, 0 4xx, 0 5xx
@@ -109,7 +109,7 @@ req/s           :     319.96      356.66      341.33       13.56    48.00%
 ```
 
 ### Hapi: 29,213 req/s
-```sh
+```
 finished in 90.01s, 29213.33 req/s, 1.39MB/s
 requests: 1752800 total, 1752800 started, 1752800 done, 1752800 succeeded, 0 failed, 0 errored, 0 timeout
 status codes: 1752000 2xx, 0 3xx, 0 4xx, 0 5xx
