@@ -18,7 +18,7 @@ To get the most reliable results, you should be using two systems that do not sh
 
 Once you have a system running with your preferred version of Node, make sure all the frameworks and dependencies are installed.
 
-```sh
+```
 $ npm install
 ```
 
@@ -26,19 +26,19 @@ This suite is bundled with [PM2](https://pm2.keymetrics.io), a process manager w
 
 To run a specific server, use the command:
 
-```sh
+```
 $ npm run start:{app name}
 ```
 
 For example, to run Tuft:
 
-```sh
+```
 $ npm run start:tuft
 ```
 
 To run all servers simultaneously:
 
-```sh
+```
 $ npm run start:all
 ```
 
