@@ -50,75 +50,75 @@ While each server is running, use your load testing application of choice (prefe
 
 The benchmark results below use an HTTP/2 load testing client called `h2load`, which comes bundled with [nghttp2](https://nghttp2.org/).
 
-* **Date:** May 13, 2020  
-* **Hardware:** Digital Ocean CPU-optimized droplet (2 vCPUS, 4GB)  
-* **OS:** Ubuntu 18.04.3 (LTS) x64  
-* **Node version:** 14.2.0 
-* **Client command:** `h2load -t2 -c10 -m100 --duration=60 --warm-up-time=30`  
+* **Date:** May 14, 2020
+* **Hardware:** Digital Ocean CPU-optimized droplet (4 vCPUS, 8GB)
+* **OS:** Ubuntu 18.04.3 (LTS) x64
+* **Node version:** 12.16.3
+* **Client command:** `h2load -c100 -m100 --duration=60 --warm-up-time=30`
 
-### Node native: 36,701.67 req/s
+### Node native: 89,772 req/s
 ```sh
-finished in 90.00s, 36701.67 req/s, 1.68MB/s
-requests: 2202100 total, 2202100 started, 2202100 done, 2202100 succeeded, 0 failed, 0 errored, 0 timeout
-status codes: 2202000 2xx, 0 3xx, 0 4xx, 0 5xx
-traffic: 100.81MB (105710890) total, 25.30MB (26533310) headers (space savings 91.66%), 41.09MB (43082000) data
+finished in 90.01s, 89771.67 req/s, 4.11MB/s
+requests: 5386300 total, 5386300 started, 5386300 done, 5386300 succeeded, 0 failed, 0 errored, 0 timeout
+status codes: 5385000 2xx, 0 3xx, 0 4xx, 0 5xx
+traffic: 246.65MB (258631715) total, 61.74MB (64737210) headers (space savings 91.64%), 100.00MB (104852800) data
                      min         max         mean         sd        +/- sd
-time for request:     5.33ms     73.28ms     27.28ms      7.39ms    81.36%
+time for request:    75.23ms    180.33ms    111.41ms     15.11ms    72.11%
 time for connect:        0us         0us         0us         0us     0.00%
 time to 1st byte:        0us         0us         0us         0us     0.00%
-req/s           :    3614.97     3724.98     3670.14       56.07   100.00%
+req/s           :     833.24      981.65      897.66       58.21    51.00%
 ```
 
-### Tuft: 32,366.67 req/s
+### Tuft: 77,218 req/s
 ```sh
-finished in 90.00s, 32366.67 req/s, 1.48MB/s
-requests: 1942000 total, 1942000 started, 1942000 done, 1942000 succeeded, 0 failed, 0 errored, 0 timeout
-status codes: 1942900 2xx, 0 3xx, 0 4xx, 0 5xx
-traffic: 88.94MB (93265090) total, 22.56MB (23657310) headers (space savings 91.66%), 36.63MB (38408500) data
+finished in 90.01s, 77218.33 req/s, 3.54MB/s
+requests: 4633100 total, 4633100 started, 4633100 done, 4633100 succeeded, 0 failed, 0 errored, 0 timeout
+status codes: 4630300 2xx, 0 3xx, 0 4xx, 0 5xx
+traffic: 212.12MB (222421600) total, 52.81MB (55372409) headers (space savings 91.63%), 85.48MB (89633700) data
                      min         max         mean         sd        +/- sd
-time for request:     5.78ms     71.81ms     30.85ms      8.43ms    82.82%
+time for request:    99.47ms    218.24ms    129.50ms     17.04ms    73.23%
 time for connect:        0us         0us         0us         0us     0.00%
 time to 1st byte:        0us         0us         0us         0us     0.00%
-req/s           :    3219.93     3251.63     3236.61       15.24    80.00%
+req/s           :     704.93      803.33      772.14       41.34    73.00%
 ```
 
-### Fastify: 21,440.00 req/s
+### Fastify: 47,137 req/s
 ```sh
-finished in 90.00s, 21440.00 req/s, 1005.29KB/s
-requests: 1286400 total, 1286400 started, 1286400 done, 1286400 succeeded, 0 failed, 0 errored, 0 timeout
-status codes: 1286500 2xx, 0 3xx, 0 4xx, 0 5xx
-traffic: 58.90MB (61765090) total, 14.60MB (15305310) headers (space savings 91.66%), 23.69MB (24836500) data
+finished in 90.01s, 47136.67 req/s, 2.16MB/s
+requests: 2828200 total, 2828200 started, 2828200 done, 2828200 succeeded, 0 failed, 0 errored, 0 timeout
+status codes: 2826900 2xx, 0 3xx, 0 4xx, 0 5xx
+traffic: 129.55MB (135844900) total, 32.14MB (33705791) headers (space savings 91.61%), 51.90MB (54421900) data
                      min         max         mean         sd        +/- sd
-time for request:    32.58ms     93.41ms     46.60ms     10.15ms    81.99%
+time for request:   154.47ms    306.73ms    212.03ms     24.47ms    67.45%
 time for connect:        0us         0us         0us         0us     0.00%
 time to 1st byte:        0us         0us         0us         0us     0.00%
-req/s           :    2096.63     2191.64     2143.97       49.90   100.00%
+req/s           :     434.97      496.66      471.34       23.56    49.00%
 ```
 
-### Koa: 15,461.67 req/s
+### Koa: 34,135 req/s
 ```sh
-finished in 90.00s, 15461.67 req/s, 725.12KB/s
-requests: 927700 total, 927700 started, 927700 done, 927700 succeeded, 0 failed, 0 errored, 0 timeout
-status codes: 927900 2xx, 0 3xx, 0 4xx, 0 5xx
-traffic: 42.49MB (44551390) total, 10.90MB (11425880) headers (space savings 91.65%), 17.67MB (18532800) data
+finished in 90.01s, 34135.00 req/s, 1.57MB/s
+requests: 2048100 total, 2048100 started, 2048100 done, 2048100 succeeded, 0 failed, 0 errored, 0 timeout
+status codes: 2048600 2xx, 0 3xx, 0 4xx, 0 5xx
+traffic: 93.91MB (98468800) total, 23.31MB (24442186) headers (space savings 91.59%), 37.55MB (39375700) data
                      min         max         mean         sd        +/- sd
-time for request:    32.37ms    149.09ms     64.64ms     15.74ms    71.50%
+time for request:   192.35ms    443.51ms    292.88ms     35.93ms    68.17%
 time for connect:        0us         0us         0us         0us     0.00%
 time to 1st byte:        0us         0us         0us         0us     0.00%
-req/s           :    1483.34     1638.34     1546.16       79.33    60.00%
+req/s           :     319.96      356.66      341.33       13.56    48.00%
 ```
 
-### Hapi: 12,813.33 req/s
+### Hapi: 29,213 req/s
 ```sh
-finished in 90.00s, 12813.33 req/s, 625.81KB/s
-requests: 768800 total, 768800 started, 768800 done, 768800 succeeded, 0 failed, 0 errored, 0 timeout
-status codes: 768700 2xx, 0 3xx, 0 4xx, 0 5xx
-traffic: 36.67MB (38450010) total, 10.88MB (11404458) headers (space savings 92.52%), 14.11MB (14797900) data
+finished in 90.01s, 29213.33 req/s, 1.39MB/s
+requests: 1752800 total, 1752800 started, 1752800 done, 1752800 succeeded, 0 failed, 0 errored, 0 timeout
+status codes: 1752000 2xx, 0 3xx, 0 4xx, 0 5xx
+traffic: 83.68MB (87748668) total, 24.77MB (25975981) headers (space savings 92.48%), 31.94MB (33493200) data
                      min         max         mean         sd        +/- sd
-time for request:    46.83ms    155.88ms     78.00ms     15.49ms    72.14%
+time for request:   211.65ms    497.77ms    342.22ms     43.28ms    68.31%
 time for connect:        0us         0us         0us         0us     0.00%
 time to 1st byte:        0us         0us         0us         0us     0.00%
-req/s           :    1224.98     1336.66     1281.32       58.33   100.00%
+req/s           :     271.63      304.99      292.11       13.20    73.00%
 ```
 ## People
 The creator and maintainer of Tuft is [Stuart Kennedy](https://github.com/rav2040).
