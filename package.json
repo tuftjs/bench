@@ -35,7 +35,7 @@
   },
   "dependencies": {
     "@hapi/hapi": "^19.1.1",
-    "fastify": "^2.14.1",
+    "fastify": "^2.15.1",
     "koa": "^2.11.0",
     "koa-router": "^8.0.8",
     "pm2": "^4.4.0",
