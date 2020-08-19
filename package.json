@@ -34,11 +34,11 @@
     "stop:all": "node_modules/.bin/pm2 stop all"
   },
   "dependencies": {
-    "@hapi/hapi": "^19.1.1",
-    "fastify": "^2.14.1",
-    "koa": "^2.11.0",
-    "koa-router": "^8.0.8",
-    "pm2": "^4.4.0",
-    "tuft": "^1.0.0-alpha.7"
+    "@hapi/hapi": "^20.0.0",
+    "fastify": "^3.2.1",
+    "koa": "^2.13.0",
+    "koa-router": "^9.4.0",
+    "pm2": "^4.4.1",
+    "tuft": "^2.0.0-alpha.1"
   }
 }
