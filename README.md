@@ -1,6 +1,6 @@
 # Tuft Benchmark Comparison
 
-UpdateThis repository contains a suite of basic example applications for a few different *routing-enabled* frameworks, including Tuft, that have been set up for benchmarking purposes. Each application has a single `GET` route that responds with the text `'Hello, world!\n'`.
+This repository contains a suite of basic example applications for a few different *routing-enabled* frameworks, including Tuft, that have been set up for benchmarking purposes. Each application has a single `GET` route that responds with the text `'Hello, world!\n'`.
 
 The frameworks to be tested include:
 
