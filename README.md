@@ -5,11 +5,11 @@ This repository contains a suite of basic example applications for a few differe
 The frameworks to be tested include:
 
 * No framework (Node native)
-* [Tuft](https://tuft.dev)
-* [Express](https://expressjs.com)
-* [Koa](https://koajs.com)
-* [Hapi](https://hapi.dev)
-* [Fastify](https://fastify.io)
+* [Tuft](https://tuft.dev) `2.0.0-beta.2`
+* [Express](https://expressjs.com) `4.17.1`
+* [Koa](https://koajs.com) `2.13.0`
+* [Hapi](https://hapi.dev) `20.0.0`
+* [Fastify](https://fastify.io) `3.2.1`
 
 ## Methodology
 
