@@ -19,12 +19,12 @@
     "benchmark"
   ],
   "scripts": {
-    "start:node": "node ./lib/node.js",
-    "start:tuft": "node ./lib/tuft.js",
-    "start:express": "node ./lib/express.js",
-    "start:koa": "node ./lib/koa.js",
-    "start:fastify": "node ./lib/fastify.js",
-    "start:hapi": "node ./lib/hapi.js"
+    "start:node": "pm2 start ./lib/node.js -i max",
+    "start:tuft": "pm2 start ./lib/tuft.js -i max",
+    "start:express": "pm2 start ./lib/express.js -i max",
+    "start:koa": "pm2 start ./lib/koa.js -i max",
+    "start:fastify": "pm2 start ./lib/fastify.js -i max",
+    "start:hapi": "pm2 start ./lib/hapi.js -i max"
   },
   "dependencies": {
     "@hapi/hapi": "^20.0.0",
@@ -32,6 +32,7 @@
     "express": "^4.17.1",
     "fastify": "^3.3.0",
     "koa": "^2.13.0",
+    "pm2": "^4.4.1",
     "tuft": "^2.0.0"
   }
 }
